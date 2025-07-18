@@ -1,20 +1,17 @@
-{% extends 'base.html' %}
-
-{% block title %}Send OTP{% endblock %}
-
-{% block extra_head %}
-<!-- Yahan kuch aur head content chahiye to daal sakte ho -->
-{% endblock %}
-
-{% block content %}
-<h2>Send OTP</h2>
-<form method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send OTP</title>
+    <meta name="fast2sms" content="U0HXG5FX9cvTx2V3U9WX6yNTR3CcWdye">
+</head>
+<body>
+    <h2>Send OTP</h2>
+    <form method="POST">
     {% csrf_token %}
-    <input type="text" name="mobile" placeholder="Enter mobile number" required>
+    <label>Enter Mobile Number:</label>
+    <input type="text" name="mobile" required>
     <button type="submit">Send OTP</button>
 </form>
-
-{% for message in messages %}
-  <p>{{ message }}</p>
-{% endfor %}
-{% endblock %}
+</body>
+</html>

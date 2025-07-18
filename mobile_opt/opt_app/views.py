@@ -3,9 +3,6 @@ from django.shortcuts import render
 import random
 from django.http import HttpResponse
 
-def homepage(request):
-    return render(request, 'base.html')
-
 def send_otp_sms(mobile, otp):
     url = "https://www.fast2sms.com/dev/bulkV2"
     headers = {
