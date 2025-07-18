@@ -1,6 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Verify OTP{% endblock %}
+
+{% block extra_head %}
+<!-- Yahan extra CSS/JS chahiye to daal sakte ho -->
+{% endblock %}
+
+{% block content %}
+<h2>Verify OTP</h2>
 <form method="POST" action="{% url 'verify_otp' %}">
     {% csrf_token %}
     <label>Enter OTP sent to {{ mobile }}:</label>
     <input type="text" name="otp" required>
     <button type="submit">Verify OTP</button>
 </form>
+{% endblock %}
