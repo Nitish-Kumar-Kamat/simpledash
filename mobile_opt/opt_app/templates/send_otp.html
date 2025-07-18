@@ -1,6 +1,18 @@
-<form method="POST">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Verification</title>
+    <meta name="fast2sms" content="U0HXG5FX9cvTx2V3U9WX6yNTR3CcWdye">
+</head>
+<body>
+    <h2>Enter your mobile number to get OTP</h2>
+    <form method="POST">
     {% csrf_token %}
     <label>Enter Mobile Number:</label>
     <input type="text" name="mobile" required>
     <button type="submit">Send OTP</button>
 </form>
+</body>
+</html>
